@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "527877489379",
+    "firebase_url": "https://kibuhostels.firebaseio.com",
+    "project_id": "kibuhostels",
+    "storage_bucket": "kibuhostels.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527877489379:android:8850cc113f9faaf9017bd6",
+        "android_client_info": {
+          "package_name": "com.example.kibabiihostels"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527877489379-umio56oc6b3ic050km7a95atc3el06ov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwFwXGt46Y3DqGtNRx3EN4nDl33Eu0mCQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527877489379-umio56oc6b3ic050km7a95atc3el06ov.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
