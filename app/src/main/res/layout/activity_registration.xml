@@ -15,9 +15,8 @@
 
         <ImageView
             android:id="@+id/logoimage"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:scaleType="fitCenter"
             android:src="@drawable/kibabiimotto"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
