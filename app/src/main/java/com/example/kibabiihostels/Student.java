@@ -1,13 +1,22 @@
 package com.example.kibabiihostels;
 
-public class DbhelperClass {
-    String email,firstname,middlename,lastname,retistrationnumber,password,idnumber,phone;
+public class Student {
+    String email;
+    String firstname;
+    String middlename;
+    String lastname;
+    String retistrationnumber;
+    String password;
+    String idnumber;
+    String phone;
 
-    public DbhelperClass() {
 
+    //firebase requires an empty constructor, otherwise the app will not work well
+    public Student() {
     }
 
-    public DbhelperClass(String email, String firstname, String middlename, String lastname, String retistrationnumber, String password, String idnumber, String phone) {
+
+    public Student(String email, String firstname, String middlename, String lastname, String retistrationnumber, String password, String idnumber, String phone) {
         this.email = email;
         this.firstname = firstname;
         this.middlename = middlename;
@@ -17,6 +26,7 @@ public class DbhelperClass {
         this.idnumber = idnumber;
         this.phone = phone;
     }
+
 
     public String getEmail() {
         return email;
