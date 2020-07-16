@@ -14,8 +14,11 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class RegistrationActivity extends AppCompatActivity {
 
+    //Widgets
     EditText regidno,regfname,regmname,reglname,regreno,regemail,regphone,regpassword;
     Button btnreg;
+
+    //Firebase
     private DatabaseReference mDatabase;
 
     @Override
@@ -33,6 +36,7 @@ public class RegistrationActivity extends AppCompatActivity {
         regphone = findViewById(R.id.phone);
         btnreg = findViewById(R.id.btnregnow);
 
+        //Creating an instance of the database
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
         btnreg.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +54,9 @@ public class RegistrationActivity extends AppCompatActivity {
                     String phone = regphone.getText().toString();
 
                     Student student = new Student(email, firstname, middlename, lastname, retistrationnumber, password, idnumber, phone);
+
+                    //this will create a student table where all other values will be set, this means the idnumbers have to be unique otherwise
+                    //if the id is the same, the data will be overwritten
                     mDatabase.child("students").child(idnumber).setValue(student);
                 }
                 catch(Exception e){
@@ -58,7 +65,5 @@ public class RegistrationActivity extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 }
