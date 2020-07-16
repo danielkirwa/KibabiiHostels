@@ -8,196 +8,181 @@
     android:scrollbarTrackVertical="@drawable/scroll_rail"
     android:scrollbarSize="5dp">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".RegistrationActivity"
-        android:orientation="vertical"
-        android:padding="5dp"
-        android:background="#fff">
+        tools:context=".MainActivity">
 
         <ImageView
-            android:layout_width="match_parent"
+            android:id="@+id/logoimage"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
             android:src="@drawable/kibabiimotto"
-            android:transitionName="logo_image"
-            android:layout_marginTop="10dp"
-            />
-
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:fontFamily="sans-serif-condensed-light"
             android:text="Easy and best way to manage non residential student's"
+            android:id="@+id/descrp"
             android:textColor="#364DE9"
-            android:textSize="22sp"
+            android:textSize="18sp"
             android:textStyle="italic"
-            android:transitionName="logo_text" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logoimage" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="Fill the form to sign up now"
-            android:transitionName="logo_text"
-            android:textSize="18sp"
-            android:layout_marginTop="10dp"
-            android:textStyle="italic"/>
-        <LinearLayout
-            android:layout_width="match_parent"
+            android:id="@+id/form_text"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintEnd_toEndOf="@id/descrp"
+            app:layout_constraintStart_toStartOf="@id/descrp"
+            app:layout_constraintTop_toBottomOf="@id/descrp" />
+
+        <EditText
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="10dp"
-            >
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/idnumber"
-                android:hint="ID Number"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                >
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    />
+            android:id="@+id/idnumber"
+            android:hint="ID Number"
+            android:background="@drawable/edit_box"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintEnd_toEndOf="@id/form_text"
+            app:layout_constraintStart_toStartOf="@id/form_text"
+            app:layout_constraintTop_toBottomOf="@id/form_text"
+            android:inputType="text"/>
 
-            </com.google.android.material.textfield.TextInputLayout>
+        <EditText
+            android:id="@+id/firstname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_box"
+            android:hint="First name"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@id/idnumber"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@id/idnumber"
+            app:layout_constraintTop_toBottomOf="@id/idnumber" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/firstname"
-                android:hint="First name"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                >
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/middlename"
+            android:hint="Middle name"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_box"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintEnd_toEndOf="@id/firstname"
+            app:layout_constraintStart_toStartOf="@id/firstname"
+            app:layout_constraintTop_toBottomOf="@id/firstname"
+            android:inputType="text"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/lastname"
+            android:hint="Last name"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_box"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintEnd_toEndOf="@id/middlename"
+            app:layout_constraintStart_toStartOf="@id/middlename"
+            app:layout_constraintTop_toBottomOf="@id/middlename"
+            android:inputType="text"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/regno"
+            android:hint="Registration No"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_box"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintEnd_toEndOf="@id/lastname"
+            app:layout_constraintStart_toStartOf="@id/lastname"
+            app:layout_constraintTop_toBottomOf="@id/lastname"
+            android:inputType="text"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/email"
+            android:layout_marginTop="8dp"
+            android:hint="Email"
+            android:background="@drawable/edit_box"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintEnd_toEndOf="@id/regno"
+            app:layout_constraintStart_toStartOf="@id/regno"
+            app:layout_constraintTop_toBottomOf="@id/regno"
+            android:inputType="text"/>
 
-            </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/middlename"
-                android:hint="Middle name"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                >
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/phone"
+            android:hint="Phone"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_box"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintEnd_toEndOf="@id/email"
+            app:layout_constraintStart_toStartOf="@id/email"
+            app:layout_constraintTop_toBottomOf="@id/email"
+            android:inputType="text"/>
 
-            </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/lastname"
-                android:hint="Last name"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                >
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/password"
+            android:hint="Password"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_box"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintEnd_toEndOf="@id/phone"
+            app:layout_constraintStart_toStartOf="@id/phone"
+            app:layout_constraintTop_toBottomOf="@id/phone"
+            android:inputType="text"/>
 
-            </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/regno"
-                android:hint="Registration No"
-                app:counterMaxLength="11"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                >
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    />
+        <Button
+            android:id="@+id/btnregnow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="SIGN UP NOW"
+            android:background="#364DE9"
+            android:textSize="14sp"
+            android:textColor="#fff"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintEnd_toEndOf="@id/password"
+            app:layout_constraintStart_toStartOf="@id/password"
+            app:layout_constraintTop_toBottomOf="@id/password"/>
 
-            </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/email"
-                android:hint="Email"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                >
+        <TextView
+            android:id="@+id/btnbacklogin"
+            android:layout_width="0dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="Back to Login"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:textColor="#364DE9"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintEnd_toEndOf="@id/btnregnow"
+            app:layout_constraintStart_toStartOf="@id/btnregnow"
+            app:layout_constraintTop_toBottomOf="@id/btnregnow"/>
 
-            </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/phone"
-                android:hint="Phone"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                >
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/password"
-                android:hint="Password"
-                app:passwordToggleEnabled="true"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                >
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    />
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-
-
-
-
-
-            <Button
-                android:id="@+id/btnregnow"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:text="SIGN UP NOW"
-                android:background="#364DE9"
-                android:textSize="20sp"
-                android:textColor="#fff"/>
-
-            <Button
-                android:id="@+id/btnbacklogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:text="Back to Login"
-                android:background="#00000000"
-                android:textSize="20sp"
-                android:textColor="#364DE9"/>
-
-
-
-
-
-        </LinearLayout>
-
-
-
-    </LinearLayout>
 </ScrollView>
+
+
