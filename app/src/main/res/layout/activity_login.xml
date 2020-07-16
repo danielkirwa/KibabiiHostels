@@ -75,7 +75,7 @@
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="#364DE9"
+                android:background="@drawable/button_box"
                 android:text="Login"
                 android:textAllCaps="false"
                 android:textColor="#fff"
